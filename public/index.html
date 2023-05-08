@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMS App</title>
+  <style>
+    /* center the form */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    /* style the input fields and button */
+    input[type="tel"],
+    textarea {
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* style error message */
+    .error-message {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <form method="post" action="/send-sms">
+    <h2>Send SMS</h2>
+    <label for="phoneNumber">Phone Number</label>
+    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter phone number" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Enter message" required></textarea>
+
+    <input type="submit" value="Send Message">
+    <div class="error-message" id="errorMessage"></div>
+  </form>
+</body>
+
+</html>
