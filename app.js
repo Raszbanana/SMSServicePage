@@ -21,12 +21,9 @@ app.get('/', (req, res) => {
 
 app.post('/send-sms', (req, res) => {
   const phoneNumber = req.body.phoneNumber;
-  console.log(phoneNumber);
   const message = req.body.message;
 
   const formData = new URLSearchParams();
-
-  console.log(apiKey);
 
   formData.append('user_api_key', apiKey);
   formData.append('sms_message', message);
